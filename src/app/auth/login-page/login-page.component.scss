@@ -1,0 +1,31 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #e3e3e3;
+}
+
+.form-div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    padding: 60px 40px;
+    border-radius: 30px;
+    border: 1px solid #a9a9a9;
+    width: 300px;
+}
+
+.app-title {
+    font-size: 28px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.sign-in-title {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0;
+}

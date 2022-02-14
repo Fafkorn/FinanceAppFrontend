@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="form-div">
+        <p class="app-title">FinanceApp</p>
+        <mat-divider></mat-divider>
+        <p class="sign-in-title">Sign in</p>
+        <form [formGroup]="loginForm">
+            <div class="row">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput formControlName="username" />
+                </mat-form-field>
+            </div>
+            
+            <div class="row">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" type="password"/>
+                </mat-form-field>
+            </div>
+
+            <button class="full-width" mat-raised-button color="primary">Sign In</button>
+        </form>
+    </div>
+</div>
+
