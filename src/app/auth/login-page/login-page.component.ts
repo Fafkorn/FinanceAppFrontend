@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { LoginPageActions } from 'src/store/auth/actions';
 
 @Component({
   selector: 'app-login-page',
@@ -19,5 +21,8 @@ export class LoginPageComponent implements OnInit {
             username: ['', Validators.required],
             password: ['', Validators.required]
         });
+    }
+
+    submit() {
     }
 }

@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-redux/store": "^10.0.0",
     "@angular/animations": "~10.2.0",
     "@angular/cdk": "^10.2.7",
     "@angular/common": "~10.2.0",
@@ -22,7 +23,15 @@
     "@angular/platform-browser": "~10.2.0",
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
+    "@ngrx/effects": "^13.0.2",
+    "@ngrx/router-store": "^13.0.2",
+    "@ngrx/store": "^13.0.2",
+    "@ngrx/store-devtools": "^13.0.2",
+    "ng-oidc-client": "^2.0.4",
     "ng-openapi-gen": "^0.20.0",
+    "ng-redux": "^4.4.3",
+    "ngrx-store-localstorage": "^13.0.0",
+    "node-localstorage-sync": "^2.2.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
