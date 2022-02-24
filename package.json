@@ -32,6 +32,10 @@
     "ng-redux": "^4.4.3",
     "ngrx-store-localstorage": "^13.0.0",
     "node-localstorage-sync": "^2.2.4",
+    "oidc-client": "^1.11.5",
+    "redux": "^4.1.2",
+    "redux-devtools": "^3.7.0",
+    "redux-devtools-extension": "^2.13.9",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

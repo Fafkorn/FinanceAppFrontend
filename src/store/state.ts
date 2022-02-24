@@ -1,6 +1,6 @@
-import { authReducers, AuthModuleState } from './auth/auth-module.state';
+import { authModuleReducers, AuthModuleState } from './auth/auth-module.state';
 import * as fromRouter from '@ngrx/router-store';
-import { authFeatureKey, authModuleFeatureKey } from './feature-keys';
+import { authModuleFeatureKey } from './feature-keys';
 import { InjectionToken } from '@angular/core';
 import { Action, ActionReducer, ActionReducerMap, createFeatureSelector, MetaReducer } from '@ngrx/store';
 import { localStorageSync } from 'ngrx-store-localstorage';
@@ -13,7 +13,7 @@ export interface State {
 
 export const ROOT_REDUCERS = new InjectionToken<ActionReducerMap<State, Action>>('Root reducers token', {
     factory: () => ({
-        [authModuleFeatureKey]: authReducers,
+        [authModuleFeatureKey]: authModuleReducers,
         router: fromRouter.routerReducer
     })
 });
@@ -45,6 +45,9 @@ export function localStorageSyncReducer(reducer: ActionReducer<any>): ActionRedu
 
 export const metaReducers: MetaReducer<State>[] = [logger, localStorageSyncReducer, clearStateMetaReducer];
 
-export const selectRouter = createFeatureSelector<State, fromRouter.RouterState>('router');
+export const selectRouter = createFeatureSelector<
+    State, 
+    fromRouter.RouterState
+>('router');
 
 //export const { selectRouteData } = fromRouter.getSelectors(selectRouter);

@@ -1,16 +1,16 @@
-import { Action, combineReducers, createFeature } from "@ngrx/store";
-import { authFeatureKey } from "../feature-keys";
+import { Action, combineReducers, createFeatureSelector } from "@ngrx/store";
+import { authFeatureKey, authModuleFeatureKey } from "../feature-keys";
 import { AuthReducer } from "./reducers";
-import { AuthState } from "./reducers/auth.reducer";
+import {State } from '../state';
 
 export interface AuthModuleState {
     [authFeatureKey]: AuthReducer.AuthState
 }
 
-export function authReducers(state: AuthModuleState | undefined, action: Action) {
+export function authModuleReducers(state: AuthModuleState | undefined, action: Action) {
     return combineReducers({
         [authFeatureKey]: AuthReducer.authReducer
     })(state, action)
 }
 
-//export const selectAuthState = createFeature.Selector<AuthState, AuthModuleState> (authFeatureKey)
+export const selectAuthModuleState = createFeatureSelector<State, AuthModuleState> (authModuleFeatureKey)
